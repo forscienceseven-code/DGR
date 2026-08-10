@@ -77,7 +77,7 @@ def compute_overlap_score(prev_chunk, new_chunk, prev_r, L, start_j, dims):
     dims = np.asarray(dims)
     prev_chunk=np.diff(prev_chunk[:,dims],axis=0)
     new_chunk=np.diff(new_chunk[:,dims],axis=0)
-    score=np.linalg.norm(prev_chunk[prev_r]-new_chunk[0])
+    score=np.linalg.norm(prev_chunk[prev_r]-new_chunk[0])**2
     return score
 
 
